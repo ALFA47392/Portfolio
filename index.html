@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavien Alcazar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: 800; letter-spacing: -1px; color: var(--text);">F.ALCAZAR</div>
+        <div class="nav-links">
+            <span id="nav-home" onclick="renderHome()">Accueil</span>
+            <span id="nav-parcours" onclick="renderExpertise()">Mon parcours</span>
+            <span id="nav-projets" onclick="renderProjets()">Mes projets</span>
+            <span id="nav-sport" onclick="renderSport()">Mon sport</span>
+            <button id="theme-toggle" onclick="toggleTheme()">MODE CLAIR</button>
+        </div>
+    </nav>
+
+    <div id="main-content"></div>
+
+    <div id="modal" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/pages.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
