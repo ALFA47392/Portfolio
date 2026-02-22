@@ -17,9 +17,12 @@ function renderHome() {
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <span class="badge">Disponibilité Stage : Mars - Juin 2026</span>
                 </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span class="badge">Disponibilité Alternance : Septembre 2026 - Juin 2028</span>
+                </div>
 
                 <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem;">
-                    <a href="images/CV_Alcazar_Flavien.pdf" download style="text-decoration: none;">
+                    <a href="images/CV_Stage_Alcazar_Flavien.pdf" download style="text-decoration: none;">
                         <div class="badge" style="background: var(--accent); color: #000; padding: 1rem 2rem; font-size: 0.9rem; cursor: pointer; transition: 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
                             Téléchargez mon CV
                         </div>
