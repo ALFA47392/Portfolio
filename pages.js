@@ -1,12 +1,11 @@
 function renderHome() {
     window.scrollTo(0, 0);
     setActiveNav('nav-home');
-content.innerHTML = `
+
+    content.innerHTML = `
         <section class="page-padding hero" style="display: flex; justify-content: center;">
-            <div style="max-width: 900px; width: 100%; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; justify-content: center;">
-                
-                <img src="images/flavien.png" alt="Flavien Alcazar" class="hero-img" style="margin: 0 auto;">
-                
+            <div style="max-width: 900px; width: 100%; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;">
+                <img src="images/flavien.png" alt="Flavien Alcazar" class="hero-img">
                 <div style="flex: 1; min-width: 300px;">
                     <h1>FLAVIEN<br><span>ALCAZAR</span></h1>
                     <p style="font-size: 1.4rem; color: var(--text-dim); margin: 1.5rem 0;">
@@ -220,222 +219,231 @@ function renderExpertise() {
     `;
 }
 function renderProjets() {
+    // Scroll en haut
     window.scrollTo(0, 0);
+    // Mise à jour de la nav active
     setActiveNav('nav-projets');
 
-    window.openProjectModal = function() {
-        const modal = document.getElementById("projectModal");
-        if (modal) {
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-    };
+window.openProjectModal = function() {
+    const modal = document.getElementById("projectModal");
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Empêche le scroll
+    }
+};
 
-    window.closeProjectModal = function() {
-        const modal = document.getElementById("projectModal");
-        if (modal) {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    };
+window.closeProjectModal = function() {
+    const modal = document.getElementById("projectModal");
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Réactive le scroll
+    }
+};
 
-    window.addEventListener('click', function(event) {
-        const modal = document.getElementById("projectModal");
-        if (event.target === modal) {
-            window.closeProjectModal();
-        }
-    });
+// Fermer si clic à l'extérieur de la modale
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById("projectModal");
+    if (event.target === modal) {
+        window.closeProjectModal();
+    }
+});
 
     content.innerHTML = `
-        <section style="background: linear-gradient(rgba(1,3,7,0.6), rgba(1,3,7,0.6)), url('images/fond_code.jpg'); background-size: cover; background-position: center; min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 4rem 10%;">
-            <h2 style="font-size: 3.5rem; font-weight: 800; text-shadow: 0 5px 25px rgba(0,0,0,1);">EXPÉRIENCES <span>& RÉALISATIONS</span></h2>
-        </section>
+<section style="background: linear-gradient(rgba(1,3,7,0.6), rgba(1,3,7,0.6)), url('images/fond_code.jpg'); background-size: cover; background-position: center; min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 4rem 10%;">
+    <h2 style="font-size: 3.5rem; font-weight: 800; text-shadow: 0 5px 25px rgba(0,0,0,1);">EXPÉRIENCES <span>& RÉALISATIONS</span></h2>
+</section>
 
-        <div class="page-padding">
-            <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-purple); padding-left: 1rem;">Parcours Professionnel</h3>
+                <div class="page-padding">
+                    <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-purple); padding-left: 1rem;">Parcours Professionnel</h3>
+                    <div class="grid" style="margin-bottom: 5rem;">
+                        <div class="card">
+                             <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span class="badge">2023</span>
+                                <span class="badge">2024</span>
+                            </div>
+                            <h3>Emploi Saisonnier</h3>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                                Entretien des espaces verts — Mairie de Pont-du-Casse (47480)<br>
+                                Première expérience en milieu professionnel : travail d'équipe, ponctualité et rigueur opérationnelle.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span class="badge">2025</span>
+                            </div>
+                            <h3>Emploi Saisonnier</h3>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                                Entretien des bâtiments et mécanique — Mairie de Foulayronnes (47510)<br>
+                                Développement de ma capacité d'apprentissage, d'adaptation et de résolution de problèmes techniques en autonomie.
+                            </p>
+                        </div>
+                        <div class="card" style="border: 1px solid var(--accent);">
+                            <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span class="badge">STAGE 2025</span>
+                            </div>
+                            <h3>Stage — FORTIL</h3>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                                Stage de 2 éme année d'études — FORTIL, Toulouse.<br>
+                                Conception d'un outil métier de gestion des compétences pour un burreau d'etudes via Angular 19 et NestJS.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 1rem;">Réalisations Techniques</h3>
+
+<div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border-color: rgba(255,255,255,0.1);">
+    <div style="flex: 1; padding: 2.5rem;">
+        <h3 style="font-size: 1.8rem; margin: 1rem 0;">Stage FORTIL — Gestion des compétences</h3>
+        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+            Conception intégrale d'un outil métier visant à remplacer des processus Excel obsolètes. 
+            Le projet assure la centralisation des compétences des consultants pour optimiser le matching profil-projet. 
+            Réalisation du cycle complet : recueil des besoins, prototypage sous Figma, modélisation de la base de données PostgreSQL, développement Fullstack et mise en production.
+        </p>
+        <div class="skill-tag-box">
+            <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Angular 19, NestJS (Node.js), PostgreSQL, Figma, Docker.</p>
+        </div>
+    </div>
+    <div style="flex: 1.5; display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <img src="images/app.png" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+    </div>
+</div>
+<div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border: 1px solid var(--border); background: var(--card); border-radius: 24px; color: var(--text);">
+    <div style="flex: 1; padding: 2.5rem; display: flex; flex-direction: column;">
+        <h3 style="font-size: 1.8rem; margin: 1rem 0;">Analyse de Sentiment & Classification Yelp</h3>
+        <p style="color: var(--text-dim); margin-bottom: 1.5rem; line-height: 1.6;">
+            Conception d'une chaîne de traitement du langage naturel (NLP) pour classifier des milliers d'avis clients. <br>
+            Mise en œuvre de deux architectures de Deep Learning : un modèle LSTM bidirectionnel et un modèle BERT basé sur l'attention. <br>
+            BERT a permis d'atteindre une précision de 0.81 sur la polarité, surpassant les approches séquentielles classiques.
+        </p>
+
+        <button onclick="openProjectModal()" class="badge" style="background: var(--accent); color: #000; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; width: fit-content; transition: 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            Voir les détails techniques
+        </button>
+        
+        <div class="skill-tag-box" style="margin-top: 2.5rem; margin-bottom: 1rem;">
+            <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">COMPÉTENCES & OUTILS :</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">Python, PyTorch, TensorFlow, Hugging Face, Scikit-learn.</p>
+        </div>
+    </div>
+    
+    <div style="flex: 1.5; background: #1f2937; display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <img src="images/BERT_LSTM.PNG" alt="Matrice de confusion BERT" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border);">
+    </div>
+</div>
+
+<div id="projectModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px);">
+    <div style="background-color: var(--card); margin: 5% auto; padding: 2.5rem; border: 1px solid var(--border); width: 85%; max-width: 1100px; border-radius: 20px; color: var(--text); position: relative; max-height: 85vh; overflow-y: auto;">
+        
+        <span onclick="closeProjectModal()" style="position: absolute; right: 25px; top: 15px; font-size: 35px; cursor: pointer; color: var(--text-dim);">&times;</span>
+        
+        <h2 style="font-size: 2.2rem; color: var(--accent); margin-bottom: 1rem;">Comparaison des performances : BERT vs LSTM</h2>
+        <p style="color: var(--text-dim); margin-bottom: 2rem;">Analyse comparative basée sur les métriques de classification et les matrices de confusion.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch;">
             
-            <div class="grid" style="margin-bottom: 5rem;">
-                <div class="card">
-                    <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <span class="badge">2023</span>
-                        <span class="badge">2024</span>
-                    </div>
-                    <h3>Emploi Saisonnier</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
-                        Entretien des espaces verts — Mairie de Pont-du-Casse (47480)<br>
-                        Première expérience en milieu professionnel : travail d'équipe, ponctualité et rigueur opérationnelle.
-                    </p>
+            <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column;">
+                <div style="flex: 1;">
+                    <h3 style="color: var(--text); margin-bottom: 15px;">Modèle BERT (Transformers)</h3>
+                    <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
+                        <li><b>Précision (Polarité) :</b> 81%</li>
+                        <li><b>Précision (Notes 1-5) :</b> 63%</li>
+                        <li><b>Atout :</b> Lecture bidirectionnelle capturant le sens profond et contextuel de chaque mot.</li>
+                    </ul>
                 </div>
-
-                <div class="card">
-                    <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <span class="badge">2025</span>
-                    </div>
-                    <h3>Emploi Saisonnier</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
-                        Entretien des bâtiments et mécanique — Mairie de Foulayronnes (47510)<br>
-                        Développement de ma capacité d'apprentissage, d'adaptation et de résolution de problèmes techniques en autonomie.
-                    </p>
-                </div>
-
-                <div class="card" style="border: 1px solid var(--accent);">
-                    <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <span class="badge">STAGE 2025</span>
-                    </div>
-                    <h3>Stage — FORTIL</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
-                        Stage de 2ème année d'études — FORTIL, Toulouse.<br>
-                        Conception d'un outil métier de gestion des compétences pour un bureau d'études via Angular 19 et NestJS.
-                    </p>
-                </div>
+                <img src="images/bert.png" style="width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid var(--border);">
             </div>
 
-            <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 1rem;">Réalisations Techniques</h3>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Stage FORTIL — Gestion des compétences</h3>
-                    <p style="color: var(--text-dim);">
-                        Conception intégrale d'un outil métier visant à remplacer des processus Excel obsolètes. 
-                        Le projet assure la centralisation des compétences des consultants pour optimiser le matching profil-projet. 
-                        Réalisation du cycle complet : recueil des besoins, prototypage sous Figma, modélisation de la base de données PostgreSQL, développement Fullstack et mise en production.
-                    </p>
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
-                        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-dim);">Angular 19, NestJS (Node.js), PostgreSQL, Figma, Docker.</p>
-                    </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column;">
+                <div style="flex: 1;">
+                    <h3 style="color: var(--text); margin-bottom: 15px;">Modèle LSTM (Récurrent)</h3>
+                    <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
+                        <li><b>Précision (Polarité) :</b> 79%</li>
+                        <li><b>Précision (Notes 1-5) :</b> 48%</li>
+                        <li><b>Atout :</b> Très rapide à l'entraînement (environ 4 minutes).</li>
+                    </ul>
                 </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/app.png" alt="Application de gestion des compétences">
-                </div>
+                <img src="images/lstm.png" style="width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid var(--border);">
             </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Analyse de Sentiment & Classification Yelp</h3>
-                    <p style="color: var(--text-dim);">
-                        Conception d'une chaîne de traitement du langage naturel (NLP) pour classifier des milliers d'avis clients. 
-                        Mise en œuvre de deux architectures de Deep Learning : un modèle LSTM bidirectionnel et un modèle BERT basé sur l'attention.
-                    </p>
+        </div>
+    </div>
+</div>
 
-                    <button onclick="openProjectModal()" class="badge" style="background: var(--accent); color: #000; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; width: fit-content; margin-top: 1rem;">
-                        Voir les détails techniques
-                    </button>
-                    
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
-                        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">COMPÉTENCES & OUTILS :</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-dim);">Python, PyTorch, TensorFlow, Hugging Face, Scikit-learn.</p>
-                    </div>
-                </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/BERT_LSTM.PNG" alt="Analyse de sentiment Yelp">
-                </div>
-            </div>
+            <div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border-color: rgba(255,255,255,0.1);">
+                <div style="flex: 1; padding: 2.5rem;">
 
-            <div id="projectModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px);">
-                <div style="background-color: var(--card); margin: 5% auto; padding: 2.5rem; border: 1px solid var(--border); width: 85%; max-width: 1100px; border-radius: 20px; color: var(--text); position: relative; max-height: 85vh; overflow-y: auto;">
-                    
-                    <span onclick="closeProjectModal()" style="position: absolute; right: 25px; top: 15px; font-size: 35px; cursor: pointer; color: var(--text-dim);">&times;</span>
-                    
-                    <h2 style="font-size: 2.2rem; color: var(--accent); margin-bottom: 1rem;">Comparaison des performances : BERT vs LSTM</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 2rem;">Analyse comparative basée sur les métriques de classification et les matrices de confusion.</p>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch;">
-                        
-                        <div style="background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column;">
-                            <div style="flex: 1;">
-                                <h3 style="color: var(--text); margin-bottom: 15px;">Modèle BERT (Transformers)</h3>
-                                <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
-                                    <li><b>Précision (Polarité) :</b> 81%</li>
-                                    <li><b>Précision (Notes 1-5) :</b> 63%</li>
-                                    <li><b>Atout :</b> Lecture bidirectionnelle capturant le sens profond et contextuel de chaque mot.</li>
-                                </ul>
-                            </div>
-                            <img src="images/bert.png" style="width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid var(--border);">
-                        </div>
-
-                        <div style="background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column;">
-                            <div style="flex: 1;">
-                                <h3 style="color: var(--text); margin-bottom: 15px;">Modèle LSTM (Récurrent)</h3>
-                                <ul style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dim);">
-                                    <li><b>Précision (Polarité) :</b> 79%</li>
-                                    <li><b>Précision (Notes 1-5) :</b> 48%</li>
-                                    <li><b>Atout :</b> Très rapide à l'entraînement (environ 4 minutes).</li>
-                                </ul>
-                            </div>
-                            <img src="images/lstm.png" style="width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid var(--border);">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Moteur de recherche de film</h3>
-                    <p style="color: var(--text-dim);">
+                    <h3 style="font-size: 1.8rem; margin: 1rem 0;">Moteur de recherche de film</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
                         Conception d'un moteur de recherche intelligent basé sur l'indexation de sous-titres de films. 
-                        Mise en œuvre d'un pipeline complet : nettoyage des données textuelles, vectorisation via le modèle TF-IDF pour la recherche sémantique, et implémentation d'un algorithme de recommandation.
+                        Mise en œuvre d'un pipeline complet : nettoyage des données textuelles, vectorisation via le modèle TF-IDF pour la recherche sémantique, et implémentation d'un algorithme de recommandation basé sur les notes attribuées. 
                     </p>
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
+                                        <div class="skill-tag-box">
                         <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-dim);">Python, PostgreSQL, Flask API.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-dim);">Python, PostgreSQL , Flask API.</p>
                     </div>
+
                 </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/app_tv.png" alt="Moteur de recherche de films">
+                <div style="flex: 1.5; display: flex; align-items: center; justify-content: center; padding: 20px;">
+                    <img src="images/app_tv.png" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Prédiction de Nutri-Score</h3>
-                    <p style="color: var(--text-dim);">
-                        Analyse de la base de données OpenFoodFacts. Réalisation d'un pipeline complet : nettoyage des données brutes, visualisation via Power BI pour l'extraction de tendances, et conception d'un workflow KNIME de classification.
-                    </p>
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
-                        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-dim);">KNIME (Analytics Platform), Power BI.</p>
-                    </div>
-                </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/PowerBI.png" alt="Dashboard Power BI Nutri-score">
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Application de Gestion Immobilière</h3>
-                    <p style="color: var(--text-dim);">
+
+
+
+<div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border-color: rgba(255,255,255,0.1);">
+    <div style="flex: 1; padding: 2.5rem;">
+        <h3 style="font-size: 1.8rem; margin: 1rem 0;">Prédiction de Nutri-Score</h3>
+        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+            Analyse de la base de données <b>OpenFoodFacts</b>. Réalisation d'un pipeline complet : nettoyage des données brutes, visualisation via <b>Power BI</b> pour l'extraction de tendances, et conception d'un workflow <b>KNIME</b>. Ce dernier permet de prédire le Nutri-Score des produits via des algorithmes de classification basés sur leurs caractéristiques nutritionnelles.
+        </p>
+        <div class="skill-tag-box">
+            <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">KNIME (Analytics Platform), Power BI.</p>
+        </div>
+    </div>
+    <div style="flex: 1.5; display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <img src="images/PowerBI.png" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+    </div>
+</div>
+
+            <div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border-color: rgba(255,255,255,0.1);">
+                <div style="flex: 1; padding: 2.5rem;">
+                    <h3 style="font-size: 1.8rem; margin: 1rem 0;">Application de Gestion Immobilière</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
                         Analyse approfondie des besoins clients et modélisation d'une architecture de données robuste sous Oracle SQL Developer. 
-                        Développement intégral de la logique métier et de l'interface utilisateur en Java.
+                        Développement intégral de la logique métier et de l'interface utilisateur en Java. 
                     </p>
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
+                    <div class="skill-tag-box">
                         <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
                         <p style="font-size: 0.85rem; color: var(--text-dim);">Java, Oracle SQL Developer, Modélisation relationnelle (MCD/MLD).</p>
                     </div>
                 </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/immo.png" alt="Application Java Immobilier">
+                <div style="flex: 1.5; display: flex; align-items: center; justify-content: center; padding: 20px;">
+                    <img src="images/immo.png" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Data Hub Oracle APEX</h3>
-                    <p style="color: var(--text-dim);">
-                        Conception d'un dashboard décisionnel industriel. Ce projet s'inscrit dans le parcours AGED pour l'aide à la décision par la donnée.
+
+
+            <div class="card" style="display: flex; gap: 30px; margin-bottom: 4rem; padding: 0; overflow: hidden; align-items: stretch; cursor: default; border-color: rgba(255,255,255,0.1);">
+                <div style="flex: 1; padding: 2.5rem;">
+                    <h3 style="font-size: 1.8rem; margin: 1rem 0;">Data Hub Oracle APEX</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                        Conception d'un dashboard décisionnel industriel. Ce projet s'inscrit dans le parcours <b>AGED</b> (Administration, Gestion et Exploitation des Données) pour l'aide à la décision par la donnée.
                     </p>
-                    <div class="skill-tag-box" style="margin-top: 2rem;">
+                    <div style="background: rgba(0,242,255,0.05); padding: 1rem; border-radius: 10px;">
                         <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
                         <p style="font-size: 0.85rem; color: var(--text-dim);">Oracle APEX, PL/SQL, Triggers, Dashboarding KPI.</p>
                     </div>
                 </div>
-                <div class="project-image-container" style="background: transparent;">
-                    <img src="images/apex.png" alt="Dashboard Oracle APEX">
+                <div style="flex: 1.5; display: flex; align-items: center; justify-content: center; padding: 20px;">
+                    <img src="images/apex.png" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
                 </div>
             </div>
-
-            <p style="text-align: center; margin-top: 5rem; font-size: 0.8rem; color: var(--text-dim); opacity: 0.4;">
+        <p style="text-align: center; margin-top: 5rem; font-size: 0.8rem; color: var(--text-dim); opacity: 0.4;">
                 © 2026 Flavien Alcazar 
             </p>
         </div>

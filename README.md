@@ -15,7 +15,7 @@ Bienvenue sur le dépôt de mon portfolio personnel. Ce projet centralise mes r�
 * **Déploiement :** [Précisez : GitHub Pages / Vercel / Netlify]
 
 ## 📂 Architecture
-* `assets/` : Ressources graphiques, icônes et CV (PDF).
+* `images/` : Ressources graphiques, icônes et CV (PDF).
 * `css/` : Feuilles de style (Design system, Media Queries).
 * `js/` : Gestion du menu mobile, des filtres de projets et des animations.
 * `index.html` : Structure sémantique du site.

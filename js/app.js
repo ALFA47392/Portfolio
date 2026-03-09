@@ -23,3 +23,11 @@ function closeModal() { document.getElementById('modal').style.display = 'none';
 
 // Chargement initial
 renderHome();
+
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+   
+    if (window.innerWidth <= 768) {
+        menu.classList.toggle('active');
+    }
+}

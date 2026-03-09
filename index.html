@@ -9,16 +9,23 @@
 </head>
 <body>
 
-    <nav>
-        <div style="font-weight: 800; letter-spacing: -1px; color: var(--text);">F.ALCAZAR</div>
-        <div class="nav-links">
-            <span id="nav-home" onclick="renderHome()">Accueil</span>
-            <span id="nav-parcours" onclick="renderExpertise()">Mon parcours</span>
-            <span id="nav-projets" onclick="renderProjets()">Mes projets</span>
-            <span id="nav-sport" onclick="renderSport()">Mon sport</span>
-            <button id="theme-toggle" onclick="toggleTheme()">MODE CLAIR</button>
-        </div>
-    </nav>
+<nav>
+    <div style="font-weight: 800; letter-spacing: -1px; color: var(--text);">F.ALCAZAR</div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-links" id="nav-menu">
+        <span id="nav-home" onclick="renderHome(); toggleMenu()">Accueil</span>
+        <span id="nav-parcours" onclick="renderExpertise(); toggleMenu()">Mon parcours</span>
+        <span id="nav-projets" onclick="renderProjets(); toggleMenu()">Mes projets</span>
+        <span id="nav-sport" onclick="renderSport(); toggleMenu()">Mon sport</span>
+        <button id="theme-toggle" onclick="toggleTheme()">MODE CLAIR</button>
+    </div>
+</nav>
 
     <div id="main-content"></div>
 
