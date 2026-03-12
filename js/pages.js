@@ -20,7 +20,7 @@ content.innerHTML = `
                     </div>
 
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="images/CV_Stage_Alcazar_Flavien.pdf" download style="text-decoration: none;">
+                        <a href="images/CV_Alcazar_Flavien.pdf" download style="text-decoration: none;">
                             <div class="badge" style="background: var(--accent); color: #000; padding: 0.8rem 1.5rem; font-size: 0.9rem; cursor: pointer; transition: 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
                                 Téléchargez mon CV
                             </div>
