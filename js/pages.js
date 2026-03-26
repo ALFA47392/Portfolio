@@ -295,7 +295,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Stage FORTIL — Gestion des compétences</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim); margin-top: 15px;">
                         Conception intégrale d'un outil métier visant à remplacer des processus Excel obsolètes. 
                         Le projet assure la centralisation des compétences des consultants pour optimiser le matching profil-projet. 
                         Réalisation du cycle complet : recueil des besoins, prototypage sous Figma, modélisation de la base de données PostgreSQL, développement Fullstack et mise en production.
@@ -313,7 +313,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Analyse de Sentiment & Classification Yelp</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim);margin-top: 15px;">
                         Conception d'une chaîne de traitement du langage naturel (NLP) pour classifier des milliers d'avis clients. 
                         Mise en œuvre de deux architectures de Deep Learning : un modèle LSTM bidirectionnel et un modèle BERT basé sur l'attention.
                     </p>
@@ -372,7 +372,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Moteur de recherche de film</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim); margin-top: 15px;">
                         Conception d'un moteur de recherche intelligent basé sur l'indexation de sous-titres de films. 
                         Mise en œuvre d'un pipeline complet : nettoyage des données textuelles, vectorisation via le modèle TF-IDF pour la recherche sémantique, et implémentation d'un algorithme de recommandation.
                     </p>
@@ -389,7 +389,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Prédiction de Nutri-Score</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim); margin-top: 15px;">
                         Analyse de la base de données OpenFoodFacts. Réalisation d'un pipeline complet : nettoyage des données brutes, visualisation via Power BI pour l'extraction de tendances, et conception d'un workflow KNIME de classification.
                     </p>
                     <div class="skill-tag-box" style="margin-top: 2rem;">
@@ -405,7 +405,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Application de Gestion Immobilière</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim); margin-top: 15px;">
                         Analyse approfondie des besoins clients et modélisation d'une architecture de données robuste sous Oracle SQL Developer. 
                         Développement intégral de la logique métier et de l'interface utilisateur en Java.
                     </p>
@@ -422,7 +422,7 @@ function renderProjets() {
             <div class="project-card">
                 <div class="project-info">
                     <h3>Data Hub Oracle APEX</h3>
-                    <p style="color: var(--text-dim);">
+                    <p style="color: var(--text-dim); margin-top: 15px;">
                         Conception d'un dashboard décisionnel industriel. Ce projet s'inscrit dans le parcours AGED pour l'aide à la décision par la donnée.
                     </p>
                     <div class="skill-tag-box" style="margin-top: 2rem;">
