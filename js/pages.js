@@ -15,7 +15,7 @@ content.innerHTML = `
                         Futur Data Analyst orienté Business Intelligence.
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
-                        <span class="badge" style="width: fit-content;">Disponibilité Stage : Mars - Juin 2026</span>
+                        <span class="badge" style="width: fit-content;">Disponibilité Stage : Avril - Juin 2026</span>
                         <span class="badge" style="width: fit-content;">Disponibilité Alternance : Septembre 2026 - Juin 2028</span>
                     </div>
 
