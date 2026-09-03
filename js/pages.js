@@ -10,13 +10,12 @@ content.innerHTML = `
                 <div style="flex: 1; min-width: 300px;">
                     <h1>FLAVIEN<br><span>ALCAZAR</span></h1>
                     <p style="font-size: 1.4rem; color: var(--text-dim); margin: 1.5rem 0;">
-                        Étudiant en BUT 3 AGED à l'IUT Paul Sabatier.<br>
-                        Spécialisé en Administration, Gestion et Exploitation des Données.<br>
-                        Futur Data Analyst orienté Business Intelligence.
+                        Étudiant en Master MIASHS — parcours ICE-LD à l'Université Toulouse Jean Jaurès.<br>
+                        Ingénieur chef de projet IT en alternance chez UPSA.<br>
+                        Spécialisé en ingénierie des données et Business Intelligence.
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
-                        <span class="badge" style="width: fit-content;">Disponibilité Stage : Juin - Août 2026 (8 semaines)</span>
-                        <span class="badge" style="width: fit-content;">Disponibilité Alternance : Septembre 2026 - Juin 2028</span>
+                        <span class="badge" style="width: fit-content;">En alternance — Septembre 2026 / Juin 2028</span>
                     </div>
 
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
@@ -47,7 +46,7 @@ content.innerHTML = `
                 <div style="display: flex; flex-direction: column; gap: 2rem; line-height: 1.8; color: var(--text-dim); font-size: 1.1rem;">
                     
                     <p>
-                        L'informatique a toujours été pour moi un terrain de jeu fascinant. J'ai toujours été captivé par la manière dont la logique pouvait résoudre des problèmes concrets. Cette curiosité ne m'a jamais quitté : elle m'a mené du lycée jusqu'à mon BUT en parcours AGED, où j'ai appris à structurer, sécuriser et exploiter la donnée pour en extraire de la valeur.
+                        L'informatique a toujours été pour moi un terrain de jeu fascinant. J'ai toujours été captivé par la manière dont la logique pouvait résoudre des problèmes concrets. Cette curiosité ne m'a jamais quitté : elle m'a mené du lycée jusqu'à mon BUT en parcours AGED, où j'ai appris à structurer, sécuriser et exploiter la donnée pour en extraire de la valeur, puis vers un Master MIASHS parcours ICE-LD que je poursuis aujourd'hui en alternance.
                     </p>
 
                     <p>
@@ -57,7 +56,7 @@ content.innerHTML = `
                     <div style="background: rgba(0, 242, 255, 0.03); padding: 2rem; border-radius: 24px; border: 1px dashed var(--accent); margin: 1rem 0;">
                         <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.3rem;">Mes ambitions</h4>
                         <p>
-                            Aujourd'hui, je souhaite mettre cette énergie au service de la Data Analyse. Mon projet est d'approfondir mes compétences en Master ou en École d'Ingénieur, avec une volonté forte de réaliser ce cursus en alternance. Je cherche à allier ma passion pour l'informatique à la réalité du terrain pour devenir un expert capable de transformer les données en leviers stratégiques.
+                            Aujourd'hui, je mets cette énergie au service de l'ingénierie des données et de la conduite de projet. Mon alternance chez UPSA, sur un poste d'ingénieur chef de projet IT, me permet d'allier ma passion pour l'informatique à la réalité du terrain. Mon objectif : devenir capable de piloter des projets de bout en bout, en faisant le lien entre les équipes techniques et les besoins métier.
                         </p>
                     </div>
                     <h4 style="color: var(--text); font-size: 1.2rem; margin-top: 1rem; margin-bottom: 0;">
@@ -143,7 +142,7 @@ function renderExpertise() {
                     </p>
                 </div>
                 <p style="color: var(--text-dim);">
-                    À l'IUT de Toulouse, j'ai suivi le parcours Administration, Gestion et Exploitation des Données (AGED). Mon profil hybride permet de maîtriser le développement logiciel, en passant par le réseaux et la sécurité, jusqu'à l'analyse avancée de données pour la prise de décision. Voici un aperçu de mon parcours en BUT Informatique :
+                    À l'IUT de Toulouse, j'ai suivi le parcours Administration, Gestion et Exploitation des Données (AGED). Mon profil hybride permet de maîtriser le développement logiciel, en passant par les réseaux et la sécurité, jusqu'à l'analyse avancée de données pour la prise de décision. Je poursuis aujourd'hui en Master MIASHS parcours ICE-LD à l'Université Toulouse Jean Jaurès, en alternance chez UPSA. Voici un aperçu de mon parcours :
                 </p>
             </div>
 
@@ -167,7 +166,15 @@ function renderExpertise() {
                 <div class="timeline-year">BUT 3</div>
                 <div class="timeline-content">
                     <h3>Expertise Data & IA</h3>
-                    <p>Approfondissement du langauge SQL et introduction à l'Intelligence Artificielle. Projet majeur : Création d'un moteur de recherche de films basé sur l'indexation de sous-titres, mobilisant les compétences "Optimiser" et "Gérer des données" en environnement complexe.</p>
+                    <p>Approfondissement du langage SQL et introduction à l'Intelligence Artificielle. Projet majeur : création d'un moteur de recherche de films basé sur l'indexation de sous-titres, mobilisant les compétences "Optimiser" et "Gérer des données" en environnement complexe. Stage au Crédit Agricole Aquitaine : conception de tableaux de bord décisionnels sur Teradata et MicroStrategy.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">M1</div>
+                <div class="timeline-content">
+                    <h3>Ingénierie logicielle & conduite de projet</h3>
+                    <p>Master MIASHS parcours ICE-LD (Ingénierie Continue pour les Écosystèmes logiciels et Données) à l'Université Toulouse Jean Jaurès. Formation centrée sur l'ingénierie du logiciel et des données, avec une ouverture sur les facteurs humains et organisationnels des projets informatiques. En parallèle, alternance chez UPSA sur un poste d'ingénieur chef de projet IT.</p>
                 </div>
             </div>
 
@@ -208,8 +215,12 @@ function renderExpertise() {
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text);">Power BI</span>
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text);">Data Viz</span>
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text);">ETL / KNIME</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text);">MicroStrategy</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text);">Teradata</span>
                     </div>
                 </div>
+
+
 
             </div>
                                                 <p style="text-align: center; margin-top: 5rem; font-size: 0.8rem; color: var(--text-dim); opacity: 0.4;">
@@ -255,42 +266,74 @@ function renderProjets() {
             <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-purple); padding-left: 1rem;">Parcours Professionnel</h3>
             
             <div class="grid" style="margin-bottom: 5rem;">
-                <div class="card">
+
+                <div class="card" style="border: 1px solid var(--accent);">
                     <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <span class="badge">2023</span>
-                        <span class="badge">2024</span>
+                        <span class="badge">STAGE 2026</span>
                     </div>
-                    <h3>Emploi Saisonnier</h3>
+                    <h3>Stage — Crédit Agricole Aquitaine</h3>
+
+                    <div style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px">
+                        Stage de 3ème année d'études — Crédit Agricole Aquitaine, Bordeaux.<br>
+                    </div>
                     <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
-                        Entretien des espaces verts — Mairie de Pont-du-Casse (47480)<br>
-                        Première expérience en milieu professionnel : travail d'équipe, ponctualité et rigueur opérationnelle.
+
+                        Conception de tableaux de bord décisionnels via Teradata et MicroStrategy pour le pilotage de l'activité commerciale.
                     </p>
                 </div>
-
-                <div class="card">
-                    <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <span class="badge">2025</span>
-                    </div>
-                    <h3>Emploi Saisonnier</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
-                        Entretien des bâtiments et mécanique — Mairie de Foulayronnes (47510)<br>
-                        Développement de ma capacité d'apprentissage, d'adaptation et de résolution de problèmes techniques en autonomie.
-                    </p>
-                </div>
-
+                
                 <div class="card" style="border: 1px solid var(--accent);">
                     <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
                         <span class="badge">STAGE 2025</span>
                     </div>
                     <h3>Stage — FORTIL</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+
+                    <div style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px">
                         Stage de 2ème année d'études — FORTIL, Toulouse.<br>
+                    </div>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                        
                         Conception d'un outil métier de gestion des compétences pour un bureau d'études via Angular 19 et NestJS.
                     </p>
                 </div>
+
+                <div class="card">
+                    <div style="margin-bottom: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span class="badge">2023</span>
+                        <span class="badge">2024</span>
+                        <span class="badge">2025</span>
+                    </div>
+                    <h3>Emploi Saisonnier</h3>
+                    <div style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px">
+                        Entretien des espaces verts / baptiments — Mairie de Pont-du-Casse (47480) / Mairie de Foulayronnes (47510)<br>
+                    </div>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                        Première expérience en milieu professionnel : travail d'équipe, ponctualité et rigueur opérationnelle.
+                    </p>
+                </div>
+
+
             </div>
 
             <h3 style="font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 1rem;">Réalisations Techniques</h3>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Stage Crédit Agricole — Tableaux de bord décisionnels</h3>
+                    <p style="color: var(--text-dim); margin-top: 15px;">
+                        Conception et refonte de tableaux de bord destinés au pilotage de l'activité commerciale de la Caisse régionale.
+                        Le projet couvre l'ensemble de la chaîne décisionnelle : recueil du besoin auprès des directions métier, exploration du modèle de données bancaire, écriture des requêtes SQL alimentant les cubes, puis construction des visualisations.
+                        Réalisation de trois missions successives : suivi des flux commerciaux, mesure de la digitalisation des souscriptions et homogénéisation de tableaux de bord existants.
+                    </p>
+                    <div class="skill-tag-box" style="margin-top: 2rem;">
+                        <h4 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">COMPÉTENCES & OUTILS :</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-dim);">SQL, Teradata, MicroStrategy, DBeaver, Excel.</p>
+                    </div>
+                </div>
+                <div class="project-image-container" style="background: transparent;">
+                    <img src="images/dashboard.png" alt="Tableau de bord décisionnel">
+                </div>
+            </div>
 
             <div class="project-card">
                 <div class="project-info">
